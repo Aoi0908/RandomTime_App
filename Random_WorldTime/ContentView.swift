@@ -2,9 +2,7 @@
 //  ContentView.swift
 //  Random_WorldTime
 //
-//  Created by ひがしもとあおい on 2023/06/07.
-//
-
+s
 import SwiftUI
 
 struct ContentView: View {
