@@ -3,7 +3,7 @@
 //  Random_WorldTime
 //
 //  Created by ひがしもとあおい on 2023/06/07.
-//
+//テスト
 
 import SwiftUI
 import GoogleMobileAds
