@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58957BA62A39DC2300314AB7 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 58957BA52A39DC2300314AB7 /* GoogleMobileAds */; };
+		58957BA82A39DC8700314AB7 /* RandomTime_AD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58957BA72A39DC8700314AB7 /* RandomTime_AD.swift */; };
 		F7996C9D2A30A47200D10E60 /* Random_WorldTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7996C9C2A30A47200D10E60 /* Random_WorldTimeApp.swift */; };
 		F7996C9F2A30A47200D10E60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7996C9E2A30A47200D10E60 /* ContentView.swift */; };
 		F7996CA12A30A47300D10E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7996CA02A30A47300D10E60 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58957BA32A39DBD200314AB7 /* Random-WorldTime-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Random-WorldTime-Info.plist"; sourceTree = SOURCE_ROOT; };
+		58957BA72A39DC8700314AB7 /* RandomTime_AD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomTime_AD.swift; sourceTree = "<group>"; };
 		F7996C992A30A47200D10E60 /* Random_WorldTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Random_WorldTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7996C9C2A30A47200D10E60 /* Random_WorldTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random_WorldTimeApp.swift; sourceTree = "<group>"; };
 		F7996C9E2A30A47200D10E60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58957BA62A39DC2300314AB7 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +56,10 @@
 		F7996C9B2A30A47200D10E60 /* Random_WorldTime */ = {
 			isa = PBXGroup;
 			children = (
+				58957BA32A39DBD200314AB7 /* Random-WorldTime-Info.plist */,
 				F7996C9C2A30A47200D10E60 /* Random_WorldTimeApp.swift */,
 				F7996C9E2A30A47200D10E60 /* ContentView.swift */,
+				58957BA72A39DC8700314AB7 /* RandomTime_AD.swift */,
 				F7996CA02A30A47300D10E60 /* Assets.xcassets */,
 				F7996CA22A30A47300D10E60 /* Preview Content */,
 			);
@@ -83,6 +90,9 @@
 			dependencies = (
 			);
 			name = Random_WorldTime;
+			packageProductDependencies = (
+				58957BA52A39DC2300314AB7 /* GoogleMobileAds */,
+			);
 			productName = Random_WorldTime;
 			productReference = F7996C992A30A47200D10E60 /* Random_WorldTime.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +121,9 @@
 				Base,
 			);
 			mainGroup = F7996C902A30A47200D10E60;
+			packageReferences = (
+				58957BA42A39DC2300314AB7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			productRefGroup = F7996C9A2A30A47200D10E60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58957BA82A39DC8700314AB7 /* RandomTime_AD.swift in Sources */,
 				F7996C9F2A30A47200D10E60 /* ContentView.swift in Sources */,
 				F7996C9D2A30A47200D10E60 /* Random_WorldTimeApp.swift in Sources */,
 			);
@@ -269,6 +283,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Random_WorldTime/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Random-WorldTime-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -279,6 +294,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Random-WorldTime";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -297,6 +313,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Random_WorldTime/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Random-WorldTime-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -307,6 +324,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Random-WorldTime";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -337,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58957BA42A39DC2300314AB7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58957BA52A39DC2300314AB7 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58957BA42A39DC2300314AB7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F7996C912A30A47200D10E60 /* Project object */;
 }
