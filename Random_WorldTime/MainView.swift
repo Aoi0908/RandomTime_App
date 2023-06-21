@@ -9,8 +9,9 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("aa")
     }
+    
 }
 
 struct MainView_Previews: PreviewProvider {
@@ -18,3 +19,39 @@ struct MainView_Previews: PreviewProvider {
         MainView()
     }
 }
+
+
+/*
+ VStack {
+     Spacer()
+     HStack{
+         
+         Button("アプリを始める") {
+            // isMainViewPresented = true
+         }
+         //ここを
+         .font(.body)
+         .fontWeight(.bold)
+         .frame(width: 140, height: 60,alignment: .center)
+         .foregroundColor(.white)
+         .background(Color.green)
+         .cornerRadius(15,antialiased: true)
+         Button("アプリを始める") {
+            // isMainViewPresented = true
+         }
+         
+         .font(.body)
+         .fontWeight(.bold)
+         .frame(width: 140, height: 60,alignment: .center)
+         .foregroundColor(.white)
+         .background(Color.green)
+         .cornerRadius(15,antialiased: true)
+         
+     }
+     List{
+         Text("fghjklghjk")
+     }
+ }
+ 
+}
+ */
