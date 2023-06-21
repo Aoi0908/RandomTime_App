@@ -28,22 +28,32 @@ struct MainView: View {
         VStack {
             Spacer()
             HStack {
-                Button("ランダムに選択") {
+                Button("ランダムに追加") {
                     // Handle button tap
                 }
                 .font(.body)
                 .fontWeight(.bold)
-                .frame(width: 140, height: 60)
+                .frame(width: 120, height: 60)
                 .foregroundColor(.white)
                 .background(Color.red)
                 .cornerRadius(15)
                 
-                Button("アプリを閉じる") {
+                Button("全てを追加") {
                     // Handle button tap
                 }
                 .font(.body)
                 .fontWeight(.bold)
-                .frame(width: 140, height: 60)
+                .frame(width: 120, height: 60)
+                .foregroundColor(.white)
+                .background(Color.green)
+                .cornerRadius(15)
+                
+                Button("選択して追加") {
+                    // Handle button tap
+                }
+                .font(.body)
+                .fontWeight(.bold)
+                .frame(width: 120, height: 60)
                 .foregroundColor(.white)
                 .background(Color.blue)
                 .cornerRadius(15)
