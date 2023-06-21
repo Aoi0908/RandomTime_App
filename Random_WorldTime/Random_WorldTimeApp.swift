@@ -18,10 +18,16 @@ struct MyApp: App {
     }
 }
 
-class MyAppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
+class MyAppDelegate: NSObject, UIApplicationDelegate, ObservableObject, UNUserNotificationCenterDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
                      launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        
+        // リクエストのメソッド呼び出し
+        NotificationManager.instance.requestPermission()
+        
+        UNUserNotificationCenter.current().delegate = self
         return true
     }
 }

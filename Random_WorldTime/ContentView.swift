@@ -37,6 +37,10 @@ struct ContentView: View {
                             .cornerRadius(15, antialiased: true)
                     }
                 )
+                //通知を飛ばすことができるかどうかの確認Button
+//                Button(action: { NotificationManager.instance.sendNotification() }) {
+//                    Text("Send Notification!!")
+//                }
                 Spacer()
                 if let vc = sceneDelegate.window?.rootViewController {
                     switch (verticalSizeClass, horizontalSizeClass) {
