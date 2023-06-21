@@ -2,7 +2,6 @@
 //  ContentView.swift
 //  Random_WorldTime
 //
-
 import SwiftUI
 import GoogleMobileAds
 
@@ -18,10 +17,11 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Spacer()
-                Text("アプリの説明")
-                    .font(.subheadline)
+                Text("World Time Notifierは、\n世界中のランダムな場所の\n時間を通知するアプリです。\n異なるタイムゾーンや文化に触れ、\n世界の時刻を毎日のルーティンに\n取り入れましょう。")
+                    .font(.headline)
                     .foregroundColor(.gray)
                     .padding()
+                Image("Top_image")
                 Spacer()
                 NavigationLink(
                     destination: MainView(),
@@ -36,6 +36,10 @@ struct ContentView: View {
                             .cornerRadius(15, antialiased: true)
                     }
                 )
+                //通知を飛ばすことができるかどうかの確認Button
+//                Button(action: { NotificationManager.instance.sendNotification() }) {
+//                    Text("Send Notification!!")
+//                }
                 Spacer()
                 if let vc = sceneDelegate.window?.rootViewController {
                     switch (verticalSizeClass, horizontalSizeClass) {
@@ -48,7 +52,7 @@ struct ContentView: View {
                     }
                 }
             }
-            //.navigationBarTitle(Text("App"))
+            .navigationBarTitle(Text("WorldTime"))
             
         }
         
