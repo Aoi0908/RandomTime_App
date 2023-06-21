@@ -18,10 +18,11 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Spacer()
-                Text("アプリの説明")
-                    .font(.subheadline)
+                Text("World Time Notifierは、\n世界中のランダムな場所の\n時間を通知するアプリです。\n異なるタイムゾーンや文化に触れ、\n世界の時刻を毎日のルーティンに\n取り入れましょう。")
+                    .font(.headline)
                     .foregroundColor(.gray)
                     .padding()
+                Image("Top_image")
                 Spacer()
                 NavigationLink(
                     destination: MainView(),
@@ -48,7 +49,7 @@ struct ContentView: View {
                     }
                 }
             }
-            //.navigationBarTitle(Text("App"))
+            .navigationBarTitle(Text("WorldTime"))
             
         }
         
