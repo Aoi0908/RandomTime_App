@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		58957BA62A39DC2300314AB7 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 58957BA52A39DC2300314AB7 /* GoogleMobileAds */; };
 		58957BA82A39DC8700314AB7 /* RandomTime_AD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58957BA72A39DC8700314AB7 /* RandomTime_AD.swift */; };
+		F78F9C452A42F5C7004F1BC5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78F9C442A42F5C7004F1BC5 /* MainView.swift */; };
 		F7996C9D2A30A47200D10E60 /* Random_WorldTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7996C9C2A30A47200D10E60 /* Random_WorldTimeApp.swift */; };
 		F7996C9F2A30A47200D10E60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7996C9E2A30A47200D10E60 /* ContentView.swift */; };
 		F7996CA12A30A47300D10E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7996CA02A30A47300D10E60 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		58957BA32A39DBD200314AB7 /* Random-WorldTime-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Random-WorldTime-Info.plist"; sourceTree = SOURCE_ROOT; };
 		58957BA72A39DC8700314AB7 /* RandomTime_AD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomTime_AD.swift; sourceTree = "<group>"; };
+		F78F9C442A42F5C7004F1BC5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F7996C992A30A47200D10E60 /* Random_WorldTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Random_WorldTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7996C9C2A30A47200D10E60 /* Random_WorldTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random_WorldTimeApp.swift; sourceTree = "<group>"; };
 		F7996C9E2A30A47200D10E60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				58957BA32A39DBD200314AB7 /* Random-WorldTime-Info.plist */,
 				F7996C9C2A30A47200D10E60 /* Random_WorldTimeApp.swift */,
 				F7996C9E2A30A47200D10E60 /* ContentView.swift */,
+				F78F9C442A42F5C7004F1BC5 /* MainView.swift */,
 				58957BA72A39DC8700314AB7 /* RandomTime_AD.swift */,
 				F7996CA02A30A47300D10E60 /* Assets.xcassets */,
 				F7996CA22A30A47300D10E60 /* Preview Content */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58957BA82A39DC8700314AB7 /* RandomTime_AD.swift in Sources */,
+				F78F9C452A42F5C7004F1BC5 /* MainView.swift in Sources */,
 				F7996C9F2A30A47200D10E60 /* ContentView.swift in Sources */,
 				F7996C9D2A30A47200D10E60 /* Random_WorldTimeApp.swift in Sources */,
 			);
