@@ -15,6 +15,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Ad")
+            //アプリ説明のTextFieldの実装
+            //アプリを始めるButtonを実装して、次の画面(MainView)に遷移させるプログラム
             Spacer()
             if let vc = sceneDelegate.window?.rootViewController {
                 switch (verticalSizeClass, horizontalSizeClass) {
