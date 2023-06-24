@@ -1,7 +1,3 @@
-//
-//  ContentView.swift
-//  Random_WorldTime
-//
 
 import SwiftUI
 import GoogleMobileAds
