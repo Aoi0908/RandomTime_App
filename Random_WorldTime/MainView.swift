@@ -1,10 +1,3 @@
-//
-//  MainView.swift
-//  Random_WorldTime
-//
-//  Created by ひがしもとあおい on 2023/06/21.
-//
-
 import SwiftUI
 import Foundation
 
@@ -30,6 +23,7 @@ struct MainView: View {
             HStack {
                 Button("ランダムに追加") {
                     // Handle button tap
+                    initialize()
                 }
                 .font(.body)
                 .fontWeight(.bold)
@@ -40,6 +34,7 @@ struct MainView: View {
                 
                 Button("全てを追加") {
                     // Handle button tap
+                    print("全てを追加Buttonがタップされました")
                 }
                 .font(.body)
                 .fontWeight(.bold)
@@ -66,6 +61,10 @@ struct MainView: View {
                     Text(city.time)
                 }
             }
+            .onAppear {
+                // ビューが表示されたときに初期化処理を行う
+                initialize()
+            }
         }
     }
     
@@ -75,6 +74,18 @@ struct MainView: View {
         formatter.timeZone = TimeZone(identifier: timeZone)
         
         return formatter.string(from: Date())
+    }
+    
+    func initialize() {
+        // ランダムに追加ボタンが押されたときの処理を記述
+        printRandomCity()
+    }
+    
+    func printRandomCity() {
+        guard let randomCity = cities.randomElement() else {
+            return
+        }
+        print("ランダムに選ばれた都市: \(randomCity.city), 時間: \(randomCity.time)")
     }
 }
 
