@@ -15,21 +15,19 @@ struct MainView: View {
         let time: String
     }
     
-    var cities: [CityTime] {
-        [
-            CityTime(city: "ニューヨーク", time: approximateTime(for: "America/New_York")),
-            CityTime(city: "ロンドン", time: approximateTime(for: "Europe/London")),
-            CityTime(city: "東京", time: approximateTime(for: "Asia/Tokyo"))
-            
-        ]
-    }
+    @State var cities: [CityTime] = []
+    let timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        return formatter
+    }()
     
     var body: some View {
         VStack {
             Spacer()
             HStack {
                 Button("ランダムに追加") {
-                    // Handle button tap
+                    addRandomCity()
                 }
                 .font(.body)
                 .fontWeight(.bold)
@@ -39,7 +37,7 @@ struct MainView: View {
                 .cornerRadius(15)
                 
                 Button("全てを追加") {
-                    // Handle button tap
+                    addAllCities()
                 }
                 .font(.body)
                 .fontWeight(.bold)
@@ -65,8 +63,26 @@ struct MainView: View {
                     Spacer()
                     Text(city.time)
                 }
+                .onTapGesture {
+                    handleListItemTap(city)
+                }
             }
         }
+        .onAppear {
+            // ビューが表示されたときにタイマーを開始
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+                updateTimes()
+            }
+            updateTimes()
+        }
+    }
+    
+    func updateTimes() {
+        cities = [
+            CityTime(city: "ニューヨーク", time: approximateTime(for: "America/New_York")),
+            CityTime(city: "ロンドン", time: approximateTime(for: "Europe/London")),
+            CityTime(city: "東京", time: approximateTime(for: "Asia/Tokyo"))
+        ]
     }
     
     func approximateTime(for timeZone: String) -> String {
@@ -75,6 +91,19 @@ struct MainView: View {
         formatter.timeZone = TimeZone(identifier: timeZone)
         
         return formatter.string(from: Date())
+    }
+    
+    func addRandomCity() {
+        // ランダムな都市を追加する処理
+    }
+    
+    func addAllCities() {
+        // 全ての都市を追加する処理
+    }
+    
+    func handleListItemTap(_ city: CityTime) {
+        // 選択された都市の処理をここに記述
+        print("Selected city: \(city.city)")
     }
 }
 
