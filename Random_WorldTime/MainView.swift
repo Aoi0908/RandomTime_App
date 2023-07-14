@@ -25,37 +25,32 @@ struct MainView: View {
     
     var body: some View {
         VStack {
-            Spacer()
+            //Spacer()
             HStack {
-                Button("ランダムに追加") {
+                Button(action: {
                     addRandomCity()
-                }
-                .font(.body)
-                .fontWeight(.bold)
-                .frame(width: 120, height: 60)
-                .foregroundColor(.white)
-                .background(Color.red)
-                .cornerRadius(15)
+                }) {
+                    HStack {
+                        Text("ランダムに追加")
+                    }
+                }.buttonStyle(GradientButtonStyle())
                 
-                Button("全てを追加") {
+                
+                Button(action: {
                     addAllCities()
-                }
-                .font(.body)
-                .fontWeight(.bold)
-                .frame(width: 120, height: 60)
-                .foregroundColor(.white)
-                .background(Color.green)
-                .cornerRadius(15)
+                }) {
+                    HStack {
+                        Text("全てを追加")
+                    }
+                }.buttonStyle(GradientButtonStyle())
                 
-                Button("選択して追加") {
-                    // Handle button tap
-                }
-                .font(.body)
-                .fontWeight(.bold)
-                .frame(width: 120, height: 60)
-                .foregroundColor(.white)
-                .background(Color.blue)
-                .cornerRadius(15)
+                Button(action: {
+                    removeAllCities()
+                }) {
+                    HStack {
+                        Text("選択を解除")
+                    }
+                }.buttonStyle(GradientButtonStyle())
             }
             
             List(cities) { city in
@@ -99,12 +94,45 @@ struct MainView: View {
     }
     
     func updateTimes() {
-        cities = [
+        var cities: [CityTime] = []
+        
+        // アメリカ
+        let americaCities = [
             CityTime(city: "ニューヨーク", time: approximateTime(for: "America/New_York")),
-            CityTime(city: "ロンドン", time: approximateTime(for: "Europe/London")),
-            CityTime(city: "東京", time: approximateTime(for: "Asia/Tokyo"))
+            CityTime(city: "ハワイ", time: approximateTime(for: "Pacific/Honolulu")),
+            CityTime(city: "ロサンゼルス", time: approximateTime(for: "America/Los_Angeles"))
         ]
+        cities += americaCities
+        
+        // ヨーロッパ
+        let europeCities = [
+            CityTime(city: "ロンドン", time: approximateTime(for: "Europe/London")),
+            CityTime(city: "ベルリン", time: approximateTime(for: "Europe/Berlin")),
+            CityTime(city: "ヘルシンキ", time: approximateTime(for: "Europe/Helsinki")),
+            CityTime(city: "ルーマニア", time: approximateTime(for: "Europe/Rumania")),
+            CityTime(city: "ワルシャワ", time: approximateTime(for: "Europe/Warsaw"))
+        ]
+        cities += europeCities
+        
+        // アジア
+        let asiaCities = [
+            CityTime(city: "東京", time: approximateTime(for: "Asia/Tokyo")),
+            CityTime(city: "上海", time: approximateTime(for: "Asia/Shanghai")),
+            CityTime(city: "インドネシア", time: approximateTime(for: "Asia/Indonesia")),
+            CityTime(city: "タイ", time: approximateTime(for: "Asia/Bangkok")),
+            CityTime(city: "ムンバイ", time: approximateTime(for: "Asia/Kolkata"))
+        ]
+        cities += asiaCities
+        
+        // その他の地域
+        let otherCities = [
+            CityTime(city: "リオデジャネイロ", time: approximateTime(for: "America/Sao_Paulo")),
+        ]
+        cities += otherCities
+        
+        self.cities = cities
     }
+
     
     func approximateTime(for timeZone: String) -> String {
         let formatter = DateFormatter()
@@ -132,6 +160,13 @@ struct MainView: View {
         }
     }
     
+    func removeAllCities() {
+        for index in cities.indices {
+            cities[index].isSelected = false
+        }
+        
+    }
+    
     func handleListItemTap(_ city: CityTime) {
         // 選択状態の切り替え
         if let index = cities.firstIndex(where: { $0.id == city.id }) {
@@ -145,6 +180,24 @@ struct MainView: View {
         }
     }
 }
+
+struct GradientButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .foregroundColor(Color.white)
+            .padding()
+            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
+            .cornerRadius(15.0)
+            .font(.body)
+            .fontWeight(.bold)
+            .shadow(color: Color.gray, radius: 2, x: 0, y: 2)
+    }
+}
+
+
+
+
+
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

@@ -15,6 +15,9 @@ struct ContentView: View {
     //MainViewに遷移するための状態変数
     @State private var isMainViewPresented = false
     
+    // SettingViewへの遷移を管理する状態変数
+    @State private var isSettingViewPresented = false
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -38,7 +41,7 @@ struct ContentView: View {
                             .cornerRadius(15, antialiased: true)
                     }
                 )
-
+                
                 //この部分でバナーの表示を実装している
                 Spacer()
                 if let vc = sceneDelegate.window?.rootViewController {
@@ -53,6 +56,23 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle(Text("WorldTime"))
+            .navigationBarItems(
+                trailing: Button(action: {
+                    // SettingViewへの遷移をトリガーする
+                    isSettingViewPresented = true
+                }) {
+                    Image(systemName: "gear.circle")
+                }
+            )
+            // SettingViewへの遷移を実現するNavigationLink
+            .background(
+                NavigationLink(
+                    destination: SettingView(),
+                    isActive: $isSettingViewPresented,
+                    label: { EmptyView() }
+                )
+            )
+            
             
         }
         

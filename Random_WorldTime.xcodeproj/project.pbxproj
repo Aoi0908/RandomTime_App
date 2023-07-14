@@ -11,6 +11,7 @@
 		58957BA82A39DC8700314AB7 /* RandomTime_AD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58957BA72A39DC8700314AB7 /* RandomTime_AD.swift */; };
 		F78F9C452A42F5C7004F1BC5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78F9C442A42F5C7004F1BC5 /* MainView.swift */; };
 		F78F9C472A431079004F1BC5 /* otificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78F9C462A431079004F1BC5 /* otificationManager.swift */; };
+		F78F9C4B2A614549004F1BC5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78F9C4A2A614549004F1BC5 /* SettingView.swift */; };
 		F7996C9D2A30A47200D10E60 /* Random_WorldTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7996C9C2A30A47200D10E60 /* Random_WorldTimeApp.swift */; };
 		F7996C9F2A30A47200D10E60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7996C9E2A30A47200D10E60 /* ContentView.swift */; };
 		F7996CA12A30A47300D10E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7996CA02A30A47300D10E60 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		58957BA72A39DC8700314AB7 /* RandomTime_AD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomTime_AD.swift; sourceTree = "<group>"; };
 		F78F9C442A42F5C7004F1BC5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F78F9C462A431079004F1BC5 /* otificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otificationManager.swift; sourceTree = "<group>"; };
+		F78F9C4A2A614549004F1BC5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		F7996C992A30A47200D10E60 /* Random_WorldTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Random_WorldTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7996C9C2A30A47200D10E60 /* Random_WorldTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random_WorldTimeApp.swift; sourceTree = "<group>"; };
 		F7996C9E2A30A47200D10E60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				F7996C9C2A30A47200D10E60 /* Random_WorldTimeApp.swift */,
 				F78F9C462A431079004F1BC5 /* otificationManager.swift */,
 				F7996C9E2A30A47200D10E60 /* ContentView.swift */,
+				F78F9C4A2A614549004F1BC5 /* SettingView.swift */,
 				F78F9C442A42F5C7004F1BC5 /* MainView.swift */,
 				58957BA72A39DC8700314AB7 /* RandomTime_AD.swift */,
 				F7996CA02A30A47300D10E60 /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 				58957BA82A39DC8700314AB7 /* RandomTime_AD.swift in Sources */,
 				F78F9C452A42F5C7004F1BC5 /* MainView.swift in Sources */,
 				F7996C9F2A30A47200D10E60 /* ContentView.swift in Sources */,
+				F78F9C4B2A614549004F1BC5 /* SettingView.swift in Sources */,
 				F78F9C472A431079004F1BC5 /* otificationManager.swift in Sources */,
 				F7996C9D2A30A47200D10E60 /* Random_WorldTimeApp.swift in Sources */,
 			);
