@@ -1,8 +1,14 @@
-
 import SwiftUI
 import Foundation
+import GoogleMobileAds
+
 
 struct MainView: View {
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
+    @EnvironmentObject private var sceneDelegate: MySceneDelegate
+    @State private var isMainViewPresented = false
+    
     struct CityTime: Identifiable {
         let id = UUID()
         let city: String
@@ -65,8 +71,17 @@ struct MainView: View {
                     handleListItemTap(city)
                 }
             }
-            
-            
+            Spacer()
+            if let vc = sceneDelegate.window?.rootViewController {
+                switch (verticalSizeClass, horizontalSizeClass) {
+                case (.regular, .regular):
+                    BannerView(viewController: vc, windowScene: sceneDelegate.windowScene)
+                        .frame(width: 468, height: 60)
+                default:
+                    BannerView(viewController: vc, windowScene: sceneDelegate.windowScene)
+                        .frame(width: 320, height: 50)
+                }
+            }
             
         }
         .onAppear {
@@ -136,3 +151,4 @@ struct MainView_Previews: PreviewProvider {
         MainView()
     }
 }
+

@@ -7,6 +7,7 @@ import SwiftUI
 import GoogleMobileAds
 
 struct ContentView: View {
+    //バナー表示のための環境変数たち
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @Environment(\.verticalSizeClass) private var verticalSizeClass
     @EnvironmentObject private var sceneDelegate: MySceneDelegate
@@ -37,10 +38,8 @@ struct ContentView: View {
                             .cornerRadius(15, antialiased: true)
                     }
                 )
-                //通知を飛ばすことができるかどうかの確認Button
-//                Button(action: { NotificationManager.instance.sendNotification() }) {
-//                    Text("Send Notification!!")
-//                }
+
+                //この部分でバナーの表示を実装している
                 Spacer()
                 if let vc = sceneDelegate.window?.rootViewController {
                     switch (verticalSizeClass, horizontalSizeClass) {
